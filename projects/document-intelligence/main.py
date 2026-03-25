@@ -34,8 +34,21 @@ Make checks payable to Acme Corp.
 """
 
 def extract_invoice_data(text: str) -> str:
-    # Note: This demo uses OpenAI, but you can swap this client for Anthropic (Claude) or Google GenAI (Gemini)
+    # --- AI Provider Initialization Examples ---
+    
+    # 1. OpenAI (Default for this demo)
     client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+    
+    # 2. Anthropic (Claude) - Requires `pip install anthropic`
+    # import anthropic
+    # claude_client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
+
+    # 3. Google GenAI (Gemini) - Requires `pip install google-generativeai`
+    # import google.generativeai as genai
+    # genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
+    # gemini_model = genai.GenerativeModel('gemini-1.5-pro')
+    
+    # ---------------------------------------------
     
     prompt = f"""
     Extract the invoice information from the following text and format it exactly according to the requested tool schema.
