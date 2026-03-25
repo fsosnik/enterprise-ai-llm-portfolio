@@ -60,21 +60,28 @@ The projects in this portfolio are simplified, self-contained implementations of
 
 These demonstrations are intentionally modular and lightweight. To evaluate a project pattern locally:
 
+### Option A: Cloud Models (OpenAI, Claude, Gemini)
+Provide your AI provider credentials in your terminal:
 ```bash
-# 1. Provide your AI provider credentials (depending on your preferred model)
 export OPENAI_API_KEY="your-openai-key-here"
 # OR
 export ANTHROPIC_API_KEY="your-claude-key-here"
 # OR
 export GEMINI_API_KEY="your-gemini-key-here"
-# OR use a Local Model (e.g., Llama 3 via Ollama)
-# No API key required, just set the local endpoint in the Python script.
+```
 
-# 2. Navigate to a project and install dependencies
+### Option B: Local Models (e.g. Llama 3) via Ollama
+For strict data privacy and zero API costs, you can run inference entirely on your machine avoiding cloud providers:
+1. Install [Ollama](https://ollama.com/).
+2. Open a terminal and download your preferred model, for example: `ollama run llama3`
+3. Ollama automatically exposes an OpenAI-compatible API at `http://localhost:11434/v1`. 
+4. In the `main.py` of any project, simply uncomment the `Local AI` initialization block. No API keys are required.
+
+### Execution
+Navigate to the project directory and run:
+```bash
 cd projects/agentic-workflows
 pip install -r requirements.txt
-
-# 3. Execute the pipeline
 python main.py
 ```
 

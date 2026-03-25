@@ -11,20 +11,29 @@ This project simulates an **Enterprise AI Security Middleware** layer. Before se
 - **Re / Regex** (for simplistic PII detection)
 
 ## How to Run
-1. Provide your AI provider credentials:
-   ```bash
-   export OPENAI_API_KEY="your-openai-key-here"
-   # OR
-   export ANTHROPIC_API_KEY="your-claude-key-here"
-   # OR
-   export GEMINI_API_KEY="your-gemini-key-here"
-   # OR use a Local Model (e.g., Llama 3 via Ollama) - see code comments.
-   ```
-2. Install the dependencies:
+
+### Option A: Cloud Providers (OpenAI, Claude, Gemini)
+Provide your AI provider credentials:
+```bash
+export OPENAI_API_KEY="your-openai-key-here"
+# OR
+export ANTHROPIC_API_KEY="your-claude-key-here"
+# OR
+export GEMINI_API_KEY="your-gemini-key-here"
+```
+
+### Option B: Local Inference (Ollama)
+For data privacy and zero cost, run a local model:
+1. Install [Ollama](https://ollama.com/).
+2. Download a model: `ollama run llama3`
+3. Uncomment the "Local AI" block inside `main.py`.
+
+### Execution
+1. Install the dependencies:
    ```bash
    pip install -r requirements.txt
    ```
-3. Run the application:
+2. Run the application:
    ```bash
    python main.py
    ```
