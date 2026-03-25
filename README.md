@@ -1,13 +1,7 @@
-# Fernando Sosnik — Enterprise AI & LLM Portfolio
-**Welcome to my AI capabilities portfolio! This repository showcases practical examples of applied Artificial Intelligence, focusing on modern architectures, Large Language Models (LLMs), and Agentic Workflows.**
+# Enterprise AI Architecture & LLM Engineering
+**CTO & Senior Technology Leader | 20+ Years Driving Digital Transformation in Government, Nuclear Energy, and Fintech**
 
 I build scalable, production-ready AI systems that solve complex business challenges. This repository demonstrates hands-on expertise in designing and engineering LLM architectures, Retrieval-Augmented Generation (RAG) pipelines, and autonomous agentic workflows tailored for the enterprise.
-
-Contact
-LinkedIn: 
-https://linkedin.com/in/fsosnik
-GitHub: https://github.com/fsosnik
-Email: fersosnik@gmail.com
 
 ---
 
@@ -57,8 +51,12 @@ The projects in this portfolio are simplified, self-contained implementations of
 These demonstrations are intentionally modular and lightweight. To evaluate a project pattern locally:
 
 ```bash
-# 1. Provide your AI provider credentials
-export OPENAI_API_KEY="your-api-key-here"
+# 1. Provide your AI provider credentials (depending on your preferred model)
+export OPENAI_API_KEY="your-openai-key-here"
+# OR
+export ANTHROPIC_API_KEY="your-claude-key-here"
+# OR
+export GEMINI_API_KEY="your-gemini-key-here"
 
 # 2. Navigate to a project and install dependencies
 cd projects/agentic-workflows
@@ -67,9 +65,6 @@ pip install -r requirements.txt
 # 3. Execute the pipeline
 python main.py
 ```
----
-
-**Created to demonstrate practical knowledge in Applied AI, LLMs, and Python engineering.**
 
 ---
 

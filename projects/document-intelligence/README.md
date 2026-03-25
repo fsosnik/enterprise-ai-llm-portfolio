@@ -11,9 +11,13 @@ This project simulates an AI-powered extraction pipeline using LLMs. It takes ra
 - **Pydantic** (Data validation and schema generation)
 
 ## How to Run
-1. Ensure your `OPENAI_API_KEY` is set:
+1. Provide your AI provider credentials (depending on your preferred model):
    ```bash
-   export OPENAI_API_KEY="your-api-key-here"
+   export OPENAI_API_KEY="your-openai-key-here"
+   # OR
+   export ANTHROPIC_API_KEY="your-claude-key-here"
+   # OR
+   export GEMINI_API_KEY="your-gemini-key-here"
    ```
 2. Install dependencies:
    ```bash

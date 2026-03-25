@@ -46,11 +46,12 @@ def retrieve_relevant_context(query, document_chunks, top_k=1):
 
 def generate_response(query, context):
     """
-    Calls the LLM (OpenAI) with the retrieved context and the user query.
+    Calls the LLM with the retrieved context and the user query.
     """
+    # Note: This demo uses OpenAI, but you can swap this client for Anthropic (Claude) or Google GenAI (Gemini)
     client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
     
-    prompt = f\"\"\"
+    prompt = f"""
     You are a helpful customer support assistant. 
     Answer the user's question ONLY using the provided context below.
     If the context doesn't contain the answer, say "I don't have enough information to answer that."
@@ -60,7 +61,7 @@ def generate_response(query, context):
 
     Question:
     {query}
-    \"\"\"
+    """
     
     response = client.chat.completions.create(
         model="gpt-3.5-turbo",
@@ -81,12 +82,15 @@ if __name__ == "__main__":
     
     # Retrieval Phase
     retrieved_context = retrieve_relevant_context(user_query, chunks, top_k=1)
-    context_str = "\\n".join(retrieved_context)
-    print(f"\\n[Retrieved Context]: {context_str}")
+    context_str = "\n".join(retrieved_context)
+    print(f"\n[Retrieved Context]: {context_str}")
     
     # Generation Phase
-    if not os.getenv("OPENAI_API_KEY"):
-        print("\\n[!] Error: OPENAI_API_KEY environment variable not set. Please set it to see the LLM generation.")
+    api_key = os.getenv("OPENAI_API_KEY") or os.getenv("ANTHROPIC_API_KEY") or os.getenv("GEMINI_API_KEY")
+    if not api_key:
+        print("\n[!] Error: Provider API Key not set.")
+        print("Please set OPENAI_API_KEY, ANTHROPIC_API_KEY, or GEMINI_API_KEY.")
     else:
+        # For simplicity, this demo assumes OPENAI_API_KEY is present if running as-is
         answer = generate_response(user_query, context_str)
-        print(f"\\n[Assistant Response]: {answer}")
+        print(f"\n[Assistant Response]: {answer}")

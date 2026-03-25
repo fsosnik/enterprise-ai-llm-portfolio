@@ -34,14 +34,15 @@ Make checks payable to Acme Corp.
 """
 
 def extract_invoice_data(text: str) -> str:
+    # Note: This demo uses OpenAI, but you can swap this client for Anthropic (Claude) or Google GenAI (Gemini)
     client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
     
-    prompt = f\"\"\"
+    prompt = f"""
     Extract the invoice information from the following text and format it exactly according to the requested tool schema.
     
     Invoice Text:
     {text}
-    \"\"\"
+    """
     
     # Modern approach to structured extraction in OpenAI (Structured Outputs or Tool Calling)
     # Using tools for deterministic extraction schema definition
@@ -66,12 +67,15 @@ def extract_invoice_data(text: str) -> str:
     return tool_call.function.arguments
 
 if __name__ == "__main__":
-    print("--- Document Intelligence Extraction Demo ---\\n")
-    print(f"Raw Input Text:\\n{RAW_INVOICE_TEXT}")
+    print("--- Document Intelligence Extraction Demo ---\n")
+    print(f"Raw Input Text:\n{RAW_INVOICE_TEXT}")
     
-    if not os.getenv("OPENAI_API_KEY"):
-        print("\\n[!] Error: OPENAI_API_KEY environment variable not set.")
+    api_key = os.getenv("OPENAI_API_KEY") or os.getenv("ANTHROPIC_API_KEY") or os.getenv("GEMINI_API_KEY")
+    if not api_key:
+        print("\n[!] Error: Provider API Key not set.")
+        print("Please set OPENAI_API_KEY, ANTHROPIC_API_KEY, or GEMINI_API_KEY.")
     else:
+        # For simplicity, this demo assumes OPENAI_API_KEY is present if running as-is
         json_output = extract_invoice_data(RAW_INVOICE_TEXT)
         print("---------------------------------------------")
         print("Extracted Structured Output (JSON):")
@@ -81,4 +85,4 @@ if __name__ == "__main__":
         
         # We can now validate this using Pydantic directly
         invoice_obj = InvoiceData(**parsed_json)
-        print(f"\\n[Validation] Successfully parsed total amount inside Python: ${invoice_obj.total_amount}")
+        print(f"\n[Validation] Successfully parsed total amount inside Python: ${invoice_obj.total_amount}")

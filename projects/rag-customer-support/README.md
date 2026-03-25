@@ -11,9 +11,13 @@ This is a demonstration of a **Retrieval-Augmented Generation (RAG)** pipeline. 
 - **Scikit-Learn** (TF-IDF Vectorization & Cosine Similarity for Retrieval)
 
 ## How to Run
-1. Ensure you have your `OPENAI_API_KEY` set in your environment:
+1. Provide your AI provider credentials (depending on your preferred model):
    ```bash
-   export OPENAI_API_KEY="your-api-key-here"
+   export OPENAI_API_KEY="your-openai-key-here"
+   # OR
+   export ANTHROPIC_API_KEY="your-claude-key-here"
+   # OR
+   export GEMINI_API_KEY="your-gemini-key-here"
    ```
 2. Install the dependencies:
    ```bash

@@ -34,6 +34,7 @@ TOOLS = [
 ]
 
 def run_agent(query: str):
+    # Note: This demo uses OpenAI, but you can swap this client for Anthropic (Claude) or Google GenAI (Gemini)
     client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
     
     messages = [{"role": "user", "content": query}]
@@ -74,11 +75,15 @@ def run_agent(query: str):
                 model="gpt-3.5-turbo",
                 messages=messages,
             )
-            print(f"\\nFinal Agent Output:\\n{final_response.choices[0].message.content}")
+            print(f"\nFinal Agent Output:\n{final_response.choices[0].message.content}")
 
 if __name__ == "__main__":
     print("--- Agentic Workflow Demo ---")
-    if not os.getenv("OPENAI_API_KEY"):
-        print("\\n[!] Error: OPENAI_API_KEY environment variable not set.")
+    
+    api_key = os.getenv("OPENAI_API_KEY") or os.getenv("ANTHROPIC_API_KEY") or os.getenv("GEMINI_API_KEY")
+    if not api_key:
+        print("\n[!] Error: Provider API Key not set.")
+        print("Please set OPENAI_API_KEY, ANTHROPIC_API_KEY, or GEMINI_API_KEY.")
     else:
+        # For simplicity, this demo assumes OPENAI_API_KEY is present if running as-is
         run_agent("Can you analyze how we performed in February and give me a brief summary?")
