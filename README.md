@@ -44,6 +44,16 @@ The projects in this portfolio are simplified, self-contained implementations of
 *   **Technical Demonstration:** Simulates an MLOps observability pipeline that calculates statistical standard deviations to detect Data Drift and triggers automated health alerts.
 *   **Enterprise Value:** Ensures long-term model reliability, compliance, and executive trust in automated decision-making.
 
+### 5. [Enterprise AI Guardrails & Security](./projects/enterprise-ai-guardrails)
+*   **Business Context:** Exposing direct LLM access to employees or customers introduces critical risks around Data Loss (PII leakage), toxicity, and Prompt Injection.
+*   **Technical Demonstration:** Implements a strict interception middleware layer that sanitizes inputs and validates LLM outputs before they reach the designated system or user.
+*   **Enterprise Value:** Mitigates severe compliance risks, protects enterprise reputation, and unlocks the deployment of AI in highly regulated sectors like Gov and Fintech.
+
+### 6. [LLM Smart Router & FinOps](./projects/llm-smart-router)
+*   **Business Context:** Routing every trivial query to a massive frontier model (like GPT-4o or Claude 3.5 Sonnet) scales operations costs unsustainably and increases operational latency.
+*   **Technical Demonstration:** Simulates a Semantic Routing architecture that evaluates query complexity dynamically, dispatching simple tasks to ultra-fast, cheap models and reserving heavy models exclusively for deep reasoning.
+*   **Enterprise Value:** Optimizes infrastructure spend (FinOps) while strictly maintaining SLAs on latency and accuracy across high-volume traffic.
+
 ---
 
 ## Quick Demo / How to Run
