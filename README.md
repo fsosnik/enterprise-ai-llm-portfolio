@@ -4,10 +4,9 @@
 I build scalable, production-ready AI systems that solve complex business challenges. This repository demonstrates hands-on expertise in designing and engineering LLM architectures, Retrieval-Augmented Generation (RAG) pipelines, and autonomous agentic workflows tailored for the enterprise.
 
 Contact
-LinkedIn: https://linkedin.com/in/fsosnik
-
+LinkedIn: 
+https://linkedin.com/in/fsosnik
 GitHub: https://github.com/fsosnik
-
 Email: fersosnik@gmail.com
 
 ---
