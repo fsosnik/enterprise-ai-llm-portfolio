@@ -1,33 +1,24 @@
 # Agentic Workflow Automation
 
 ## Overview
-This project demonstrates how LLM-based agents can automate multi-step business workflows.
+This project simulates an **Agentic Workflow** using LLM tool calling (function calling). The agent is tasked with analyzing business performance. It autonomously decides to call a mock "fetch_kpis" tool to obtain data from an internal dashboard, then feeds that data back into the LLM context to formulate a business recommendation.
 
-## Problem
-Many business processes require multiple steps, manual intervention, and coordination.
+*Note: This is a demo to showcase how LLMs can interact with external APIs to fetch real-time data and take action, simulating an enterprise autonomous agent.*
 
-## Solution
-An agent-based system capable of:
-- breaking tasks into steps
-- using tools (APIs)
-- maintaining memory
-- orchestrating workflows
+## Stack
+- **Python 3.9+**
+- **OpenAI API** (Tool Calling & Generation)
 
-## Features
-- Tool usage
-- Task routing
-- Memory handling
-- Multi-step reasoning
-
-## Example Use Case
-Automated report generation:
-1. Fetch data
-2. Analyze
-3. Summarize
-4. Generate output
-
-## Tech Stack
-- Python
-- LangChain / custom agents
-- OpenAI / Anthropic
-- APIs
+## How to Run
+1. Ensure your `OPENAI_API_KEY` is set:
+   ```bash
+   export OPENAI_API_KEY="your-api-key-here"
+   ```
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Run the application:
+   ```bash
+   python main.py
+   ```

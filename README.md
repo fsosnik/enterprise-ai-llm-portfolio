@@ -1,72 +1,22 @@
-# Fernando Sosnik — Enterprise AI / LLM Portfolio
+# Enterprise AI & LLM Portfolio
 
-Technology executive with 20+ years of experience in IT, AI, and digital transformation, currently focused on building and applying **LLM-based systems, automation workflows, and enterprise AI solutions**.
+Welcome to my AI capabilities portfolio! This repository showcases practical examples of applied Artificial Intelligence, focusing on modern architectures, Large Language Models (LLMs), and Agentic Workflows.
 
-## 🔥 Focus Areas
-- LLM Applications (OpenAI, Anthropic)
-- RAG Pipelines (retrieval, chunking, re-ranking)
-- Agentic Workflows (tool use, memory, orchestration)
-- AI Automation for Business Processes
-- Enterprise AI Architecture & Integration
+**Note:** All projects included here are simplified, self-contained demonstration examples designed to evidence my knowledge in AI concepts, architectures, and implementation using Python and current AI stacks (OpenAI, Pydantic, Scikit-Learn, Pandas, etc.). They are purposely kept modular and readable to showcase the core concepts without the boilerplate of production infrastructure.
 
-## 🚀 What This Portfolio Shows
-- Translating business problems into AI solutions
-- Designing scalable AI architectures
-- Building end-to-end LLM workflows
-- Integrating AI with enterprise systems (APIs, data, workflows)
-- Moving from prototype → production thinking
+## 🚀 Projects Included
 
----
+1. **[RAG Customer Support Assistant](./projects/rag-customer-support)**
+   Simulates a Retrieval-Augmented Generation (RAG) pipeline for customer support. Shows document chunking, semantic retrieval using TF-IDF (as a lightweight vector search stand-in), and context-aware LLM generation.
+   
+2. **[Agentic Workflow Automation](./projects/agentic-workflows)**
+   Demonstrates an LLM agent interacting with external tools. It simulates an agent fetching KPI data via function calling and analyzing it to provide business recommendations.
 
-## 📌 Featured Projects
+3. **[Document Intelligence](./projects/document-intelligence)**
+   Shows how LLMs can extract structured, typed data (like JSON) from unstructured text (e.g., invoices) using modern schema alignment tools like Pydantic.
 
-### 1. RAG Customer Support Assistant
-LLM-powered assistant for internal knowledge retrieval.
-
-**Key Features:**
-- Semantic search with embeddings
-- Chunking + retrieval optimization
-- Re-ranking responses
-- Guardrails and prompt engineering
-
-**Stack:**
-Python, OpenAI / Anthropic, Vector DB, FastAPI
+4. **[AI Monitoring Dashboard](./projects/ai-monitoring-dashboard)**
+   A simulation of an MLOps monitoring dashboard detecting "Model Drift" in production metrics, evaluating performance degradation, and summarizing the system's state using statistical checks.
 
 ---
-
-### 2. Agentic Workflow Automation
-Multi-step AI workflow to automate business processes.
-
-**Key Features:**
-- Tool use
-- Memory
-- Task routing
-- Multi-agent orchestration
-
-**Stack:**
-Python, LangChain / custom agents, APIs
-
----
-
-### 3. Document Intelligence Pipeline
-AI-powered extraction and summarization of operational documents.
-
-**Use Case:**
-Backoffice automation / enterprise operations
-
----
-
-## 🧠 Professional Background
-
-- CTO – Nucleoeléctrica Argentina
-- CTO – Ministry of Finance (GCBA)
-- COO – Fintech
-- 20+ years leading IT, AI, and transformation initiatives
-
-## 📄 CV & Resume
-See `/docs`
-
-## 🔗 Contact
-- LinkedIn: https://linkedin.com/in/fsosnik
-- GitHub: https://github.com/fsosnik
-- Email: fersosnik@gmail.com
+*Created to demonstrate practical knowledge in Applied AI, LLMs, and Python engineering.*

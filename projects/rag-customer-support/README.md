@@ -1,35 +1,25 @@
 # RAG Customer Support Assistant
 
 ## Overview
-This project demonstrates a Retrieval-Augmented Generation (RAG) pipeline designed to support internal knowledge queries.
+This is a demonstration of a **Retrieval-Augmented Generation (RAG)** pipeline. Given a customer's query, the system retrieves the most relevant pieces of information from a predefined knowledge base and provides them as context to an LLM to generate an accurate, grounded response. 
 
-## Problem
-Organizations struggle with accessing internal documentation quickly and accurately.
+*Note: This is a conceptual demo. For simplicity, we use `scikit-learn`'s TF-IDF vectorizer to simulate document embeddings and semantic search, keeping the demo lightweight without requiring a dedicated vector database.*
 
-## Solution
-A RAG-based assistant that retrieves relevant documents and generates contextual responses.
+## Stack
+- **Python 3.9+**
+- **OpenAI API** (LLM generation)
+- **Scikit-Learn** (TF-IDF Vectorization & Cosine Similarity for Retrieval)
 
-## Architecture
-1. Document ingestion
-2. Chunking strategy
-3. Embedding generation
-4. Vector database storage
-5. Retrieval + re-ranking
-6. LLM response generation
-
-## Key Concepts Implemented
-- Chunking strategies
-- Semantic search
-- Embeddings
-- Re-ranking
-- Prompt engineering
-- Guardrails
-
-## Tech Stack
-- Python
-- OpenAI / Anthropic APIs
-- FAISS / Pinecone (simulado)
-- FastAPI
-
-## Example Flow
-User → Query → Retrieval → Context → LLM → Response
+## How to Run
+1. Ensure you have your `OPENAI_API_KEY` set in your environment:
+   ```bash
+   export OPENAI_API_KEY="your-api-key-here"
+   ```
+2. Install the dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Run the application:
+   ```bash
+   python main.py
+   ```
