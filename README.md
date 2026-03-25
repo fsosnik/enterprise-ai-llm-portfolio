@@ -1,27 +1,73 @@
-# Fernando Sosnik — Enterprise AI & LLM Portfolio
+# Enterprise AI Architecture & LLM Engineering
+**CTO & Senior Technology Leader | 20+ Years Driving Digital Transformation in Government, Nuclear Energy, and Fintech**
 
-Welcome to my AI capabilities portfolio! This repository showcases practical examples of applied Artificial Intelligence, focusing on modern architectures, Large Language Models (LLMs), and Agentic Workflows.
+I build scalable, production-ready AI systems that solve complex business challenges. This repository demonstrates hands-on expertise in designing and engineering LLM architectures, Retrieval-Augmented Generation (RAG) pipelines, and autonomous agentic workflows tailored for the enterprise.
 
-**Note:** All projects included here are simplified, self-contained demonstration examples designed to evidence my knowledge in AI concepts, architectures, and implementation using Python and current AI stacks (OpenAI, Pydantic, Scikit-Learn, Pandas, etc.). They are purposely kept modular and readable to showcase the core concepts without the boilerplate of production infrastructure.
+---
 
-## Projects Included
+## What I Build
 
-1. **[RAG Customer Support Assistant](./projects/rag-customer-support)**
-   Simulates a Retrieval-Augmented Generation (RAG) pipeline for customer support. Shows document chunking, semantic retrieval using TF-IDF (as a lightweight vector search stand-in), and context-aware LLM generation.
-   
-2. **[Agentic Workflow Automation](./projects/agentic-workflows)**
-   Demonstrates an LLM agent interacting with external tools. It simulates an agent fetching KPI data via function calling and analyzing it to provide business recommendations.
+*   **Autonomous Agentic Systems:** Multi-agent workflows that securely interact with APIs and enterprise systems to automate high-value, complex decisions.
+*   **Enterprise RAG Pipelines:** High-precision, context-aware information retrieval systems built on unstructured private data.
+*   **Intelligent Information Extraction:** LLM-driven pipelines that reliably extract strict, structured architectures from chaotic document formats.
+*   **MLOps & Observability:** Production-grade monitoring frameworks to detect model drift, track accuracy degradation, and maintain AI system health across the lifecycle.
 
-3. **[Document Intelligence](./projects/document-intelligence)**
-   Shows how LLMs can extract structured, typed data (like JSON) from unstructured text (e.g., invoices) using modern schema alignment tools like Pydantic.
+---
 
-4. **[AI Monitoring Dashboard](./projects/ai-monitoring-dashboard)**
-   A simulation of an MLOps monitoring dashboard detecting "Model Drift" in production metrics, evaluating performance degradation, and summarizing the system's state using statistical checks.
+## Why This Repository Exists
 
-   ---
-*Created to demonstrate practical knowledge in Applied AI, LLMs, and Python engineering.*
+While my core background spans two decades of leading large technical teams and delivering mission-critical architecture, I maintain deep, hands-on engineering capabilities. 
 
-## Contact
-- LinkedIn: https://linkedin.com/in/fsosnik
-- GitHub: https://github.com/fsosnik
-- Email: fersosnik@gmail.com
+The projects in this portfolio are simplified, self-contained implementations of complex enterprise patterns. They are designed to demonstrate fundamental architectural understanding, the implementation of modern AI technology stacks (OpenAI, Pydantic, Pandas, Scikit-Learn), and scalability principles—all without the boilerplate overhead of proprietary production environments.
+
+---
+
+## Featured Projects
+
+### 1. [RAG Customer Support Assistant](./projects/rag-customer-support)
+*   **Business Context:** Customer support and internal teams waste thousands of hours searching siloed knowledge bases.
+*   **Technical Demonstration:** Implements a strict Retrieval-Augmented Generation (RAG) pipeline using semantic vector search and context injection to ground LLM responses and eliminate hallucinations.
+*   **Enterprise Value:** Drastically reduces resolution times while maintaining strict compliance with operational protocols.
+
+### 2. [Agentic Workflow Automation](./projects/agentic-workflows)
+*   **Business Context:** Manual data aggregation and preliminary analysis slow down executive decision-making.
+*   **Technical Demonstration:** Showcases LLM Function/Tool Calling where an autonomous agent plans, retrieves real-time local KPI data from mock endpoints, and executes analytical reasoning.
+*   **Enterprise Value:** Transforms static dashboards into proactive, operational intelligence agents that drive immediate action.
+
+### 3. [Document Intelligence Pipeline](./projects/document-intelligence)
+*   **Business Context:** Back-office operations are notoriously bottlenecked by manual data entry from unstructured invoices and contracts.
+*   **Technical Demonstration:** Leverages modern schema alignment (Pydantic) and LLM structured outputs to deterministically extract strict JSON data from chaotic text inputs.
+*   **Enterprise Value:** Enables straight-through processing (STP) for financial and legal workflows with high reliability and zero human-in-the-loop dependencies.
+
+### 4. [AI Monitoring Dashboard](./projects/ai-monitoring-dashboard)
+*   **Business Context:** AI models gracefully degrade in production due to evolving real-world data, leading to silent business failures over time.
+*   **Technical Demonstration:** Simulates an MLOps observability pipeline that calculates statistical standard deviations to detect Data Drift and triggers automated health alerts.
+*   **Enterprise Value:** Ensures long-term model reliability, compliance, and executive trust in automated decision-making.
+
+---
+
+## Quick Demo / How to Run
+
+These demonstrations are intentionally modular and lightweight. To evaluate a project pattern locally:
+
+```bash
+# 1. Provide your AI provider credentials
+export OPENAI_API_KEY="your-api-key-here"
+
+# 2. Navigate to a project and install dependencies
+cd projects/agentic-workflows
+pip install -r requirements.txt
+
+# 3. Execute the pipeline
+python main.py
+```
+
+---
+
+## Professional Focus
+
+I am actively pursuing opportunities where I can leverage my executive leadership and hands-on applied AI expertise to drive organizational scale and technological excellence.
+
+*   **Chief Technology Officer (CTO) / VP of Engineering**
+*   **Head of AI / Enterprise Architecture Leader**
+*   **Digital Transformation Executive**
