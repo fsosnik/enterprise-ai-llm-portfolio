@@ -47,6 +47,9 @@ def run_agent(query: str):
     # import google.generativeai as genai
     # genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
     # gemini_model = genai.GenerativeModel('gemini-1.5-pro', tools=[fetch_financial_kpis])
+
+    # 4. Local AI (e.g., Llama 3) via Ollama
+    # client = OpenAI(base_url="http://localhost:11434/v1", api_key="ollama")
     
     # ---------------------------------------------
     
@@ -96,7 +99,6 @@ if __name__ == "__main__":
     api_key = os.getenv("OPENAI_API_KEY") or os.getenv("ANTHROPIC_API_KEY") or os.getenv("GEMINI_API_KEY")
     if not api_key:
         print("\n[!] Error: Provider API Key not set.")
-        print("Please set OPENAI_API_KEY, ANTHROPIC_API_KEY, or GEMINI_API_KEY.")
+        print("Please set OPENAI_API_KEY, ANTHROPIC_API_KEY, or GEMINI_API_KEY (or uncomment the local Llama logic in code).")
     else:
-        # For simplicity, this demo assumes OPENAI_API_KEY is present if running as-is
         run_agent("Can you analyze how we performed in February and give me a brief summary?")

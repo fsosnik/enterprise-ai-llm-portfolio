@@ -10,7 +10,7 @@ def detect_pii(text: str) -> bool:
     In a real enterprise, use Microsoft Presidio, Google DLP, or specialized models.
     """
     # Simple regex for a standard US Social Security Number pattern XXX-XX-XXXX
-    ssn_pattern = r"\\b\\d{3}-\\d{2}-\\d{4}\\b"
+    ssn_pattern = r"\b\d{3}-\d{2}-\d{4}\b"
     if re.search(ssn_pattern, text):
         return True
     return False
@@ -24,7 +24,7 @@ def detect_prompt_injection(text: str) -> bool:
     return any(keyword in lower_text for keyword in dangerous_keywords)
 
 def execute_secure_generation(user_prompt: str) -> str:
-    print(f"\\n[Guardrail] Analyzing input: '{user_prompt}'")
+    print(f"\n[Guardrail] Analyzing input: '{user_prompt}'")
     
     # 1. Pre-Processing Guardrails (Input Validation)
     if detect_pii(user_prompt):
@@ -36,8 +36,25 @@ def execute_secure_generation(user_prompt: str) -> str:
     print("[Guardrail] Input passed security checks. Routing to LLM...")
 
     # 2. LLM Execution
-    # Note: Using OpenAI but easily swappable for Anthropic/Gemini SDKs
+    # --- AI Provider Initialization Examples ---
+    
+    # 1. OpenAI (Default for this demo)
     client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+    
+    # 2. Anthropic (Claude) - Requires `pip install anthropic`
+    # import anthropic
+    # claude_client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
+
+    # 3. Google GenAI (Gemini) - Requires `pip install google-generativeai`
+    # import google.generativeai as genai
+    # genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
+    # gemini_model = genai.GenerativeModel('gemini-1.5-pro')
+
+    # 4. Local AI (e.g., Llama 3) via Ollama
+    # client = OpenAI(base_url="http://localhost:11434/v1", api_key="ollama")
+    
+    # ---------------------------------------------
+
     response = client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[{"role": "user", "content": user_prompt}],
@@ -45,6 +62,7 @@ def execute_secure_generation(user_prompt: str) -> str:
     llm_output = response.choices[0].message.content
     
     # 3. Post-Processing Guardrails (Output Validation)
+    print(f"[LLM Core] Generated: {llm_output}")
     print("[Guardrail] Analyzing LLM output for toxicity/hallucinations...")
     if "fuck" in llm_output.lower() or "hate" in llm_output.lower():
         return "[SECURITY BLOCK] Output violates enterprise content policy."
@@ -56,8 +74,8 @@ if __name__ == "__main__":
     
     api_key = os.getenv("OPENAI_API_KEY") or os.getenv("ANTHROPIC_API_KEY") or os.getenv("GEMINI_API_KEY")
     if not api_key:
-        print("\\n[!] Error: Provider API Key not set.")
-        print("Please set OPENAI_API_KEY, ANTHROPIC_API_KEY, or GEMINI_API_KEY.")
+        print("\n[!] Error: Provider API Key not set.")
+        print("Please set OPENAI_API_KEY, ANTHROPIC_API_KEY, or GEMINI_API_KEY (or uncomment the local Llama logic in code).")
     else:
         # Test 1: Clean prompt
         print(execute_secure_generation("What is the capital of France?"))

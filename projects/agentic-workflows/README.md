@@ -7,7 +7,7 @@ This project simulates an **Agentic Workflow** using LLM tool calling (function 
 
 ## Stack
 - **Python 3.9+**
-- **OpenAI API** (Tool Calling & Generation)
+- **OpenAI API** (or Claude, Gemini, Local Llama)
 
 ## How to Run
 1. Provide your AI provider credentials (depending on your preferred model):
@@ -17,6 +17,7 @@ This project simulates an **Agentic Workflow** using LLM tool calling (function 
    export ANTHROPIC_API_KEY="your-claude-key-here"
    # OR
    export GEMINI_API_KEY="your-gemini-key-here"
+   # OR use a Local Model (e.g., Llama 3 via Ollama) - see code comments.
    ```
 2. Install dependencies:
    ```bash

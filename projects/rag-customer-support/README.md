@@ -7,7 +7,7 @@ This is a demonstration of a **Retrieval-Augmented Generation (RAG)** pipeline. 
 
 ## Stack
 - **Python 3.9+**
-- **OpenAI API** (LLM generation)
+- **OpenAI API** (or Claude, Gemini, Local Llama)
 - **Scikit-Learn** (TF-IDF Vectorization & Cosine Similarity for Retrieval)
 
 ## How to Run
@@ -18,6 +18,7 @@ This is a demonstration of a **Retrieval-Augmented Generation (RAG)** pipeline. 
    export ANTHROPIC_API_KEY="your-claude-key-here"
    # OR
    export GEMINI_API_KEY="your-gemini-key-here"
+   # OR use a Local Model (e.g., Llama 3 via Ollama) - see code comments.
    ```
 2. Install the dependencies:
    ```bash

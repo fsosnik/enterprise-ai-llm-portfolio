@@ -67,6 +67,8 @@ export OPENAI_API_KEY="your-openai-key-here"
 export ANTHROPIC_API_KEY="your-claude-key-here"
 # OR
 export GEMINI_API_KEY="your-gemini-key-here"
+# OR use a Local Model (e.g., Llama 3 via Ollama)
+# No API key required, just set the local endpoint in the Python script.
 
 # 2. Navigate to a project and install dependencies
 cd projects/agentic-workflows

@@ -7,7 +7,7 @@ This project simulates an AI-powered extraction pipeline using LLMs. It takes ra
 
 ## Stack
 - **Python 3.9+**
-- **OpenAI API**
+- **OpenAI API** (or Claude, Gemini, Local Llama)
 - **Pydantic** (Data validation and schema generation)
 
 ## How to Run
@@ -18,6 +18,7 @@ This project simulates an AI-powered extraction pipeline using LLMs. It takes ra
    export ANTHROPIC_API_KEY="your-claude-key-here"
    # OR
    export GEMINI_API_KEY="your-gemini-key-here"
+   # OR use a Local Model (e.g., Llama 3 via Ollama) - see code comments.
    ```
 2. Install dependencies:
    ```bash
