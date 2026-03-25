@@ -5,7 +5,9 @@ I build scalable, production-ready AI systems that solve complex business challe
 
 Contact
 LinkedIn: https://linkedin.com/in/fsosnik
+
 GitHub: https://github.com/fsosnik
+
 Email: fersosnik@gmail.com
 
 ---
@@ -68,7 +70,7 @@ python main.py
 ```
 ---
 
-Created to demonstrate practical knowledge in Applied AI, LLMs, and Python engineering.
+**Created to demonstrate practical knowledge in Applied AI, LLMs, and Python engineering.**
 
 ---
 
