@@ -1,7 +1,12 @@
-# Enterprise AI Architecture & LLM Engineering
-**CTO & Senior Technology Leader | 20+ Years Driving Digital Transformation in Government, Nuclear Energy, and Fintech**
+# Fernando Sosnik — Enterprise AI & LLM Portfolio
+**Welcome to my AI capabilities portfolio! This repository showcases practical examples of applied Artificial Intelligence, focusing on modern architectures, Large Language Models (LLMs), and Agentic Workflows.**
 
 I build scalable, production-ready AI systems that solve complex business challenges. This repository demonstrates hands-on expertise in designing and engineering LLM architectures, Retrieval-Augmented Generation (RAG) pipelines, and autonomous agentic workflows tailored for the enterprise.
+
+Contact
+LinkedIn: https://linkedin.com/in/fsosnik
+GitHub: https://github.com/fsosnik
+Email: fersosnik@gmail.com
 
 ---
 
@@ -61,6 +66,9 @@ pip install -r requirements.txt
 # 3. Execute the pipeline
 python main.py
 ```
+---
+
+Created to demonstrate practical knowledge in Applied AI, LLMs, and Python engineering.
 
 ---
 
