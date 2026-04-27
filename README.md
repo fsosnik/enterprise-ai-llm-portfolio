@@ -167,6 +167,27 @@ Capabilities:
 
 ---
 
+## Project Examples
+
+### AI Customer Support Assistant
+- [Source Code](./examples/customer-support-agent/)
+- [Architecture Notes](./docs/customer-support-architecture.md)
+
+### Internal Knowledge Assistant (RAG)
+- [Source Code](./examples/internal-rag-assistant/)
+- [Setup Guide](./docs/rag-setup.md)
+
+### Sales Copilot
+- [Source Code](./examples/sales-copilot/)
+
+### Document Intelligence
+- [Source Code](./examples/document-ai/)
+
+### Executive KPI Assistant
+- [Source Code](./examples/kpi-assistant/)
+
+---
+
 ## Reference Architecture
 
 ```text
@@ -186,21 +207,3 @@ Structured Output
         ↓
 Workflow / Report / Action
 
-## Project Examples
-
-### AI Customer Support Assistant
-- [Source Code](./examples/customer-support-agent/)
-- [Architecture Notes](./docs/customer-support-architecture.md)
-
-### Internal Knowledge Assistant (RAG)
-- [Source Code](./examples/internal-rag-assistant/)
-- [Setup Guide](./docs/rag-setup.md)
-
-### Sales Copilot
-- [Source Code](./examples/sales-copilot/)
-
-### Document Intelligence
-- [Source Code](./examples/document-ai/)
-
-### Executive KPI Assistant
-- [Source Code](./examples/kpi-assistant/)
