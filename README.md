@@ -1,96 +1,206 @@
-# Enterprise AI Architecture & LLM Engineering
-**CTO & Senior Technology Leader | 20+ Years Driving Digital Transformation in Government, Nuclear Energy, and Fintech**
+# Enterprise AI & LLM Portfolio
 
-I build scalable, production-ready AI systems that solve complex business challenges. This repository demonstrates hands-on expertise in designing and engineering LLM architectures, Retrieval-Augmented Generation (RAG) pipelines, and autonomous agentic workflows tailored for the enterprise.
+## Real-World AI Systems for Business Operations
 
----
+This portfolio showcases enterprise-oriented AI and LLM solutions designed to help companies reduce manual work, improve decision-making, automate workflows and modernize internal operations.
 
-## What I Build
+The focus is not on AI experiments.
 
-*   **Autonomous Agentic Systems:** Multi-agent workflows that securely interact with APIs and enterprise systems to automate high-value, complex decisions.
-*   **Enterprise RAG Pipelines:** High-precision, context-aware information retrieval systems built on unstructured private data.
-*   **Intelligent Information Extraction:** LLM-driven pipelines that reliably extract strict, structured architectures from chaotic document formats.
-*   **MLOps & Observability:** Production-grade monitoring frameworks to detect model drift, track accuracy degradation, and maintain AI system health across the lifecycle.
+The focus is on practical business systems.
 
 ---
 
-## Why This Repository Exists
+## What This Portfolio Demonstrates
 
-While my core background spans two decades of leading large technical teams and delivering mission-critical architecture, I maintain deep, hands-on engineering capabilities. 
-
-The projects in this portfolio are simplified, self-contained implementations of complex enterprise patterns. They are designed to demonstrate fundamental architectural understanding, the implementation of modern AI technology stacks (OpenAI, Pydantic, Pandas, Scikit-Learn), and scalability principles—all without the boilerplate overhead of proprietary production environments.
-
----
-
-## Featured Projects
-
-### 1. [RAG Customer Support Assistant](./projects/rag-customer-support)
-*   **Business Context:** Customer support and internal teams waste thousands of hours searching siloed knowledge bases.
-*   **Technical Demonstration:** Implements a strict Retrieval-Augmented Generation (RAG) pipeline using semantic vector search and context injection to ground LLM responses and eliminate hallucinations.
-*   **Enterprise Value:** Drastically reduces resolution times while maintaining strict compliance with operational protocols.
-
-### 2. [Agentic Workflow Automation](./projects/agentic-workflows)
-*   **Business Context:** Manual data aggregation and preliminary analysis slow down executive decision-making.
-*   **Technical Demonstration:** Showcases LLM Function/Tool Calling where an autonomous agent plans, retrieves real-time local KPI data from mock endpoints, and executes analytical reasoning.
-*   **Enterprise Value:** Transforms static dashboards into proactive, operational intelligence agents that drive immediate action.
-
-### 3. [Document Intelligence Pipeline](./projects/document-intelligence)
-*   **Business Context:** Back-office operations are notoriously bottlenecked by manual data entry from unstructured invoices and contracts.
-*   **Technical Demonstration:** Leverages modern schema alignment (Pydantic) and LLM structured outputs to deterministically extract strict JSON data from chaotic text inputs.
-*   **Enterprise Value:** Enables straight-through processing (STP) for financial and legal workflows with high reliability and zero human-in-the-loop dependencies.
-
-### 4. [AI Monitoring Dashboard](./projects/ai-monitoring-dashboard)
-*   **Business Context:** AI models gracefully degrade in production due to evolving real-world data, leading to silent business failures over time.
-*   **Technical Demonstration:** Simulates an MLOps observability pipeline that calculates statistical standard deviations to detect Data Drift and triggers automated health alerts.
-*   **Enterprise Value:** Ensures long-term model reliability, compliance, and executive trust in automated decision-making.
-
-### 5. [Enterprise AI Guardrails & Security](./projects/enterprise-ai-guardrails)
-*   **Business Context:** Exposing direct LLM access to employees or customers introduces critical risks around Data Loss (PII leakage), toxicity, and Prompt Injection.
-*   **Technical Demonstration:** Implements a strict interception middleware layer that sanitizes inputs and validates LLM outputs before they reach the designated system or user.
-*   **Enterprise Value:** Mitigates severe compliance risks, protects enterprise reputation, and unlocks the deployment of AI in highly regulated sectors like Gov and Fintech.
-
-### 6. [LLM Smart Router & FinOps](./projects/llm-smart-router)
-*   **Business Context:** Routing every trivial query to a massive frontier model (like GPT-4o or Claude 3.5 Sonnet) scales operations costs unsustainably and increases operational latency.
-*   **Technical Demonstration:** Simulates a Semantic Routing architecture that evaluates query complexity dynamically, dispatching simple tasks to ultra-fast, cheap models and reserving heavy models exclusively for deep reasoning.
-*   **Enterprise Value:** Optimizes infrastructure spend (FinOps) while strictly maintaining SLAs on latency and accuracy across high-volume traffic.
+- AI-powered internal tools
+- LLM-based workflow automation
+- RAG knowledge assistants
+- Business copilots
+- Document and email automation
+- Enterprise integrations
+- Secure AI architecture patterns
+- Human-in-the-loop processes
+- Practical AI for operations, sales, support and management
 
 ---
 
-## Quick Demo / How to Run
+## Business Use Cases
 
-These demonstrations are intentionally modular and lightweight. To evaluate a project pattern locally:
+### Internal Knowledge Assistant
 
-### Option A: Cloud Models (OpenAI, Claude, Gemini)
-Provide your AI provider credentials in your terminal:
-```bash
-export OPENAI_API_KEY="your-openai-key-here"
-# OR
-export ANTHROPIC_API_KEY="your-claude-key-here"
-# OR
-export GEMINI_API_KEY="your-gemini-key-here"
-```
+AI assistant connected to company documents, policies, procedures and internal knowledge bases.
 
-### Option B: Local Models (e.g. Llama 3) via Ollama
-For strict data privacy and zero API costs, you can run inference entirely on your machine avoiding cloud providers:
-1. Install [Ollama](https://ollama.com/).
-2. Open a terminal and download your preferred model, for example: `ollama run llama3`
-3. Ollama automatically exposes an OpenAI-compatible API at `http://localhost:11434/v1`. 
-4. In the `main.py` of any project, simply uncomment the `Local AI` initialization block. No API keys are required.
+Designed for:
 
-### Execution
-Navigate to the project directory and run:
-```bash
-cd projects/agentic-workflows
-pip install -r requirements.txt
-python main.py
-```
+- faster employee support
+- reduced repetitive questions
+- better access to company knowledge
+- onboarding acceleration
 
 ---
 
-## Professional Focus
+### Sales Copilot
 
-I am actively pursuing opportunities where I can leverage my executive leadership and hands-on applied AI expertise to drive organizational scale and technological excellence.
+AI support for commercial teams.
 
-*   **Chief Technology Officer (CTO) / VP of Engineering**
-*   **Head of AI / Enterprise Architecture Leader**
-*   **Digital Transformation Executive**
+Capabilities:
+
+- lead analysis
+- email drafting
+- CRM summaries
+- follow-up suggestions
+- opportunity prioritization
+
+---
+
+### Customer Support Agent
+
+AI-assisted support system for answering common questions and escalating complex cases.
+
+Capabilities:
+
+- FAQ automation
+- ticket classification
+- response suggestions
+- knowledge-base retrieval
+- escalation workflows
+
+---
+
+### Document Intelligence
+
+AI workflows for extracting, summarizing and classifying business documents.
+
+Use cases:
+
+- contracts
+- invoices
+- proposals
+- reports
+- policies
+- compliance documents
+
+---
+
+### Workflow Automation Agents
+
+AI agents designed to automate repetitive business processes.
+
+Examples:
+
+- email triage
+- task creation
+- report generation
+- data enrichment
+- operational alerts
+
+---
+
+### Executive KPI Assistant
+
+AI assistant for executives and managers.
+
+Capabilities:
+
+- KPI summaries
+- operational insights
+- anomaly detection
+- weekly reports
+- decision support
+
+---
+
+## Technical Capabilities
+
+### LLM Integration
+
+- OpenAI
+- Claude
+- Multi-model architecture
+- Prompt engineering
+- Tool calling
+- Structured outputs
+
+### Retrieval-Augmented Generation
+
+- Document ingestion
+- Chunking strategies
+- Embeddings
+- Vector search
+- Context retrieval
+- Source-grounded answers
+
+### Backend & APIs
+
+- Python
+- TypeScript
+- Node.js
+- REST APIs
+- Authentication
+- Role-based access control
+
+### Data Layer
+
+- PostgreSQL
+- SQLite
+- Vector databases
+- Data modeling
+- Query optimization
+
+### Automation
+
+- Workflow orchestration
+- Background jobs
+- Event-driven triggers
+- Human approval steps
+- Integrations with business systems
+
+### Security & Enterprise Readiness
+
+- Environment-based secrets
+- Access control
+- Audit logging
+- Data isolation
+- Safe prompt design
+- Human-in-the-loop review
+- No hardcoded credentials
+
+---
+
+## Reference Architecture
+
+```text
+User / Business Team
+        ↓
+Application Interface
+        ↓
+Authentication + RBAC
+        ↓
+AI Orchestration Layer
+        ↓
+LLM Provider / Tool Calling
+        ↓
+RAG / Business Data / APIs
+        ↓
+Structured Output
+        ↓
+Workflow / Report / Action
+
+## Project Examples
+
+### AI Customer Support Assistant
+- [Source Code](./examples/customer-support-agent/)
+- [Architecture Notes](./docs/customer-support-architecture.md)
+
+### Internal Knowledge Assistant (RAG)
+- [Source Code](./examples/internal-rag-assistant/)
+- [Setup Guide](./docs/rag-setup.md)
+
+### Sales Copilot
+- [Source Code](./examples/sales-copilot/)
+
+### Document Intelligence
+- [Source Code](./examples/document-ai/)
+
+### Executive KPI Assistant
+- [Source Code](./examples/kpi-assistant/)
