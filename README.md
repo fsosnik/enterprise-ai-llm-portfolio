@@ -167,24 +167,45 @@ Capabilities:
 
 ---
 
-## Project Examples
+## Live Project Examples
 
-### AI Customer Support Assistant
-- [Source Code](./examples/customer-support-agent/)
-- [Architecture Notes](./docs/customer-support-architecture.md)
+Real enterprise-oriented AI solutions included in this repository.
 
-### Internal Knowledge Assistant (RAG)
-- [Source Code](./examples/internal-rag-assistant/)
-- [Setup Guide](./docs/rag-setup.md)
+### Agentic Workflows
 
-### Sales Copilot
-- [Source Code](./examples/sales-copilot/)
+Autonomous and human-in-the-loop workflows for business automation.
+
+- [View Project](projects/agentic-workflows/README.md)
+
+### AI Monitoring Dashboard
+
+Operational monitoring for AI systems, usage, health and alerts.
+
+- [View Project](projects/ai-monitoring-dashboard/README.md)
 
 ### Document Intelligence
-- [Source Code](./examples/document-ai/)
 
-### Executive KPI Assistant
-- [Source Code](./examples/kpi-assistant/)
+AI extraction, summarization and classification for business documents.
+
+- [View Project](projects/document-intelligence/README.md)
+
+### Enterprise AI Guardrails
+
+Security, governance and safe execution patterns for enterprise AI.
+
+- [View Project](projects/enterprise-ai-guardrails/README.md)
+
+### LLM Smart Router
+
+Route requests dynamically across models based on cost, latency or quality.
+
+- [View Project](projects/llm-smart-router/README.md)
+
+### RAG Customer Support
+
+Retrieval-Augmented customer support assistant using company knowledge.
+
+- [View Project](projects/rag-customer-support/README.md)
 
 ---
 
